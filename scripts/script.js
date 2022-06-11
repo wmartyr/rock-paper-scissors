@@ -20,6 +20,9 @@ function computerPlay() {
 
 // create a function called playerSelection
   // get player choice
+  // check if selection is valid
+  // make player choose again if invalid
+  // format selection to correct case
   // return player choice
 
 // create a function called playRound
