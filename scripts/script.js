@@ -10,11 +10,11 @@ console.log('Test');
 function computerPlay() {
   let randNum = Math.floor(Math.random() * 3) + 1;
   if (randNum === 1) {
-    return 'rock';
+    return 'Rock';
   } else if (randNum === 2) {
-    return 'paper';
+    return 'Paper';
   } else {
-    return 'scissors';
+    return 'Scissors';
   }
 }
 
