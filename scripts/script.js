@@ -7,6 +7,17 @@ console.log('Test');
     // if number is 2, return 'paper'
     // if number is 3, return 'scissors'
 
+function computerPlay() {
+  let randNum = Math.floor(Math.random() * 3) + 1;
+  if (randNum === 1) {
+    return 'rock';
+  } else if (randNum === 2) {
+    return 'paper';
+  } else {
+    return 'scissors';
+  }
+}
+
 // create a function called playerSelection
   // get player choice
   // return player choice
@@ -14,3 +25,5 @@ console.log('Test');
 // create a function called playRound
   // compare player selection with computer random selection
   // display result
+
+console.log(computerPlay());
