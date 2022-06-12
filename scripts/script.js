@@ -25,7 +25,7 @@ function computerPlay() {
 // format selection to correct case
 // return player choice
 
-function playerSelection() {
+function playerPlay() {
   let choice = document.getElementById("playerChoice").value;
   choiceFormatted = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
   if (choiceFormatted == "Rock" || choiceFormatted == "Paper" || choiceFormatted == "Scissors") {
@@ -38,7 +38,7 @@ function playerSelection() {
 }
 
 // create a function called playRound
-// compare player selection with computer random selection
-// display result
+  // compare player selection with computer random selection
+  // display result
 
 // console.log(computerPlay());
