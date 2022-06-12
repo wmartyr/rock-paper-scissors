@@ -1,32 +1,44 @@
-console.log('Test');
+console.log("Test");
 
 // create a function called computerPlay
-  // return 'rock', 'paper', or 'scissors' randomly
-    // get a random number between 1 and 3 inclusive
-    // if number is 1, return 'rock
-    // if number is 2, return 'paper'
-    // if number is 3, return 'scissors'
+// return 'rock', 'paper', or 'scissors' randomly
+// get a random number between 1 and 3 inclusive
+// if number is 1, return 'rock
+// if number is 2, return 'paper'
+// if number is 3, return 'scissors'
 
 function computerPlay() {
   let randNum = Math.floor(Math.random() * 3) + 1;
   if (randNum === 1) {
-    return 'Rock';
+    return "Rock";
   } else if (randNum === 2) {
-    return 'Paper';
+    return "Paper";
   } else {
-    return 'Scissors';
+    return "Scissors";
   }
 }
 
 // create a function called playerSelection
-  // get player choice
-  // check if selection is valid
-  // make player choose again if invalid
-  // format selection to correct case
-  // return player choice
+// get player choice
+// check if selection is valid
+// make player choose again if invalid
+// format selection to correct case
+// return player choice
+
+function playerSelection() {
+  let choice = document.getElementById("playerChoice").value;
+  choiceFormatted = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+  if (choiceFormatted == "Rock" || choiceFormatted == "Paper" || choiceFormatted == "Scissors") {
+    document.getElementById("result").innerHTML = "";
+    return choiceFormatted;
+  } else {
+    document.getElementById("result").innerHTML = "Please choose rock, paper, or scissors. Try again.";
+  }
+
+}
 
 // create a function called playRound
-  // compare player selection with computer random selection
-  // display result
+// compare player selection with computer random selection
+// display result
 
-console.log(computerPlay());
+// console.log(computerPlay());
