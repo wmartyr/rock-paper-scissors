@@ -78,8 +78,15 @@ function startPlay() {
   console.log("computer: " + computerSelection);
 }
 
-
 // create a variable named playerSelection.
 // create a variable named computerSelection.
 let playerSelection;
 let computerSelection;
+
+// create a function named game
+  // create a variable named playerScore with an initial value of 0 that would keep track of player's score.
+  // create a variable named computerScore with an initial value of 0 that would keep track of computer's score.
+  // create a loop that would run 5 times
+    // run playRound
+    // increment the score of the winner.
+  // determine the final winner and display the result.
