@@ -32,7 +32,7 @@ function playerPlay() {
     document.getElementById("result").innerHTML = "";
     return choiceFormatted;
   } else {
-    document.getElementById("result").innerHTML = "Please choose rock, paper, or scissors. Try again.";
+    return "Error";
   }
 
 }
@@ -76,12 +76,19 @@ function startPlay() {
   computerSelection = computerPlay();
   console.log("player: " + playerSelection);
   console.log("computer: " + computerSelection);
+  if (playerSelection == "Error") {
+    document.getElementById("result").innerHTML = "Please choose rock, paper, or scissors. Try again.";
+  } else {
+    resultMessage = playRound(playerSelection, computerSelection);
+    document.getElementById("result").innerHTML = resultMessage;
+  }
 }
 
 // create a variable named playerSelection.
 // create a variable named computerSelection.
 let playerSelection;
 let computerSelection;
+let resultMessage;
 
 // create a function named game
   // create a variable named playerScore with an initial value of 0 that would keep track of player's score.
