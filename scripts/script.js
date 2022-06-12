@@ -94,6 +94,12 @@ let resultMessage;
   // create a variable named playerScore with an initial value of 0 that would keep track of player's score.
   // create a variable named computerScore with an initial value of 0 that would keep track of computer's score.
   // create a loop that would run 5 times
+    // run computerPlay and save in computerSelection
+    // prompt user for choice.
+    // run playerPlay to format choice.
+    // if choice is in the wrong format, prompt user again.
+    // save player's choice in playerSelection.
     // run playRound
+    // display result of round
     // increment the score of the winner.
-  // determine the final winner and display the result.
+  // determine the final winner and display the final result.
