@@ -34,7 +34,7 @@ function playerPlay(choice) {
 
 // create a function called playRound
   // compare playerSelection with computerSelection based on the rules i.e. paper beats rock, rock beats scissors, scissors beats paper
-  // display result
+  // return result
 
 function playRound(playerSelection, computerSelection) { 
   switch (playerSelection) {
@@ -62,20 +62,6 @@ function playRound(playerSelection, computerSelection) {
         return "You win! Scissors beats Paper"
       }
       break;
-  }
-}
-
-// create a function named startPlay that would run playerPlay and save the result in playerSelection. And run computerPlay and save in computerSelection.
-function startPlay() {
-  playerSelection = playerPlay();
-  computerSelection = computerPlay();
-  console.log("player: " + playerSelection);
-  console.log("computer: " + computerSelection);
-  if (playerSelection == "Error") {
-    document.getElementById("result").innerHTML = "Please choose rock, paper, or scissors. Try again.";
-  } else {
-    resultMessage = playRound(playerSelection, computerSelection);
-    document.getElementById("result").innerHTML = resultMessage;
   }
 }
 
