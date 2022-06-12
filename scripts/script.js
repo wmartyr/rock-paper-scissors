@@ -86,8 +86,8 @@ function playRound(playerSelection, computerSelection) {
   // determine the final winner and display the final result.
 
 function game() {
-  playerSelection = "Error";
   for (let i = 0; i < 5; i++) {
+    playerSelection = "Error";
     computerSelection = computerPlay();
     while (playerSelection == "Error") {
       choice = prompt("Enter a choice between Rock, Paper, or Scissors");
