@@ -19,22 +19,17 @@ function computerPlay() {
 }
 
 // create a function called playerSelection
-// get player choice
 // check if selection is valid
-// make player choose again if invalid
-// format selection to correct case
-// return player choice
+// return formatted answer
+// return "Error" if answer is not valid.
 
-function playerPlay() {
-  let choice = document.getElementById("playerChoice").value;
+function playerPlay(choice) {
   choiceFormatted = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
   if (choiceFormatted == "Rock" || choiceFormatted == "Paper" || choiceFormatted == "Scissors") {
-    document.getElementById("result").innerHTML = "";
     return choiceFormatted;
   } else {
     return "Error";
   }
-
 }
 
 // create a function called playRound
