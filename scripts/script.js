@@ -38,9 +38,48 @@ function playerPlay() {
 }
 
 // create a function called playRound
-  // create a variable named playerSelection and assign the return value of playerPlay
-  // create a variable named computerSelection and assign the return value of computerPlay
   // compare playerSelection with computerSelection based on the rules i.e. paper beats rock, rock beats scissors, scissors beats paper
   // display result
 
-// console.log(computerPlay());
+function playRound(playerSelection, computerSelection) { 
+  switch (playerSelection) {
+    case computerSelection:
+      return "It's a tie!";
+      break;
+    case "Rock":
+      if (computerSelection == "Paper") {
+        return "You lose! Paper beats Rock.";
+      } else {
+        return "You win! Rock beats Scissors";
+      }
+      break;
+    case "Paper":
+      if (computerSelection == "Rock") {
+        return "You win! Paper beats Rock.";
+      } else {
+        return "You lose! Scissors beats Paper";
+      }
+      break;
+    case "Scissors":
+      if (computerSelection == "Rock") {
+        return "You lose! Rock beats Scissors";
+      } else {
+        return "You win! Scissors beats Paper"
+      }
+      break;
+  }
+}
+
+// create a function named startPlay that would run playerPlay and save the result in playerSelection. And run computerPlay and save in computerSelection.
+function startPlay() {
+  playerSelection = playerPlay();
+  computerSelection = computerPlay();
+  console.log("player: " + playerSelection);
+  console.log("computer: " + computerSelection);
+}
+
+
+// create a variable named playerSelection.
+// create a variable named computerSelection.
+let playerSelection;
+let computerSelection;
