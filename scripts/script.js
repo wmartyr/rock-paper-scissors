@@ -38,7 +38,9 @@ function playerPlay() {
 }
 
 // create a function called playRound
-  // compare player selection with computer random selection
+  // create a variable named playerSelection and assign the return value of playerPlay
+  // create a variable named computerSelection and assign the return value of computerPlay
+  // compare playerSelection with computerSelection based on the rules i.e. paper beats rock, rock beats scissors, scissors beats paper
   // display result
 
 // console.log(computerPlay());
