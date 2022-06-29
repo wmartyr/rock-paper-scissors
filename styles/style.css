@@ -1,0 +1,43 @@
+* {
+  outline: dashed black 1px;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-buttons: aquamarine;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  background-color: var(--color-buttons);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
