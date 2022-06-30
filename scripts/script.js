@@ -33,6 +33,8 @@ function playRound(playerSelection) {
   computerSelection = computerPlay();
   switch (playerSelection) {
     case computerSelection:
+      playerScore++;
+      computerScore++;
       resultString = "It's a tie!";
       break;
     case "Rock":
@@ -63,7 +65,11 @@ function playRound(playerSelection) {
       }
       break;
   }
-  console.log(resultString);
+  const roundResult = document.querySelector("#roundResult");
+  const runningScore = document.querySelector("#runningScore");
+  const winner = document.querySelector("#winner");
+  roundResult.textContent = resultString;
+  runningScore.textContent = `Computer: ${computerScore}  Player: ${playerScore}`;
 }
 
 const buttons = document.querySelectorAll("button");
