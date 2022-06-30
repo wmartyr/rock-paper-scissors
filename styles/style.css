@@ -18,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap: 25px;
 }
 
 .rpsButtons {
@@ -40,4 +41,10 @@ button {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+}
+
+.results {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+
 }
