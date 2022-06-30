@@ -1,4 +1,7 @@
-console.log("Test");
+let resultString;
+let playerScore = 0;
+let computerScore = 0;
+let computerSelection;
 
 // generate the computer's choice
 
@@ -30,49 +33,45 @@ function playRound(playerSelection) {
   computerSelection = computerPlay();
   switch (playerSelection) {
     case computerSelection:
-      return "It's a tie!";
+      resultString = "It's a tie!";
       break;
     case "Rock":
       if (computerSelection == "Paper") {
         computerScore++;
-        return "You lose! Paper beats Rock.";
+        resultString = "You lose! Paper beats Rock.";
       } else {
         playerScore++;
-        return "You win! Rock beats Scissors";
+        resultString = "You win! Rock beats Scissors";
       }
       break;
     case "Paper":
       if (computerSelection == "Rock") {
         playerScore++;
-        return "You win! Paper beats Rock.";
+        resultString = "You win! Paper beats Rock.";
       } else {
         computerScore++;
-        return "You lose! Scissors beats Paper";
+        resultString = "You lose! Scissors beats Paper";
       }
       break;
     case "Scissors":
       if (computerSelection == "Rock") {
         computerScore++;
-        return "You lose! Rock beats Scissors";
+        resultString = "You lose! Rock beats Scissors";
       } else {
         playerScore++;
-        return "You win! Scissors beats Paper"
+        resultString = "You win! Scissors beats Paper"
       }
       break;
   }
-}
-
-
-function getPlayerChoice(button) {
-  button.addEventListener("click", () => {
-    console.log(playRound(button.id));
-  });
+  console.log(resultString);
 }
 
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
-  getPlayerChoice(button);
+  button.addEventListener("click", () => {
+    playRound(button.id);
+  });
 });
 
 
@@ -102,9 +101,6 @@ buttons.forEach((button) => {
 //   }
 // }
 
-let playerSelection;
-let computerSelection;
-let playerChoice;
-let playerScore = 0;
-let computerScore = 0;
+// let playerSelection;
+// let computerSelection;
 // game();
