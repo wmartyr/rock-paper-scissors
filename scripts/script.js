@@ -15,18 +15,19 @@ function computerPlay() {
 
 // format the player's answer and return it or "Error" if invalid
 
-function formatAnswer(choice) {
-  choiceFormatted = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
-  if (choiceFormatted == "Rock" || choiceFormatted == "Paper" || choiceFormatted == "Scissors") {
-    return choiceFormatted;
-  } else {
-    return "Error";
-  }
-}
+// function formatAnswer(choice) {
+//   choiceFormatted = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+//   if (choiceFormatted == "Rock" || choiceFormatted == "Paper" || choiceFormatted == "Scissors") {
+//     return choiceFormatted;
+//   } else {
+//     return "Error";
+//   }
+// }
 
 // play 1 round comparing player and computer choices
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
+  computerSelection = computerPlay();
   switch (playerSelection) {
     case computerSelection:
       return "It's a tie!";
@@ -61,28 +62,49 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+
+function getPlayerChoice(button) {
+  button.addEventListener("click", () => {
+    console.log(playRound(button.id));
+  });
+}
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  getPlayerChoice(button);
+});
+
+
+
+
+
+
+
+
+
 // play 5 rounds and output the result
 
-function game() {
-  for (let i = 0; i < 5; i++) {
-    playerSelection = "Error";
-    computerSelection = computerPlay();
-    while (playerSelection == "Error") {
-      playerChoice = prompt("Enter a choice between Rock, Paper, or Scissors");
-      playerSelection = formatAnswer(playerChoice);
-    }
-    console.log(playRound(playerSelection, computerSelection));
-  }
-  if (playerScore > computerScore) {
-    console.log("Congratulations! You won " + playerScore + " to " + computerScore + "!")
-  } else {
-    console.log("Better luck next time. You lost " + computerScore + " to " + playerScore + "!")
-  }
-}
+// function game() {
+//   for (let i = 0; i < 5; i++) {
+//     playerSelection = "Error";
+//     computerSelection = computerPlay();
+//     while (playerSelection == "Error") {
+//       playerChoice = prompt("Enter a choice between Rock, Paper, or Scissors");
+//       playerSelection = formatAnswer(playerChoice);
+//     }
+//     console.log(playRound(playerSelection, computerSelection));
+//   }
+//   if (playerScore > computerScore) {
+//     console.log("Congratulations! You won " + playerScore + " to " + computerScore + "!")
+//   } else {
+//     console.log("Better luck next time. You lost " + computerScore + " to " + playerScore + "!")
+//   }
+// }
 
 let playerSelection;
 let computerSelection;
 let playerChoice;
 let playerScore = 0;
 let computerScore = 0;
-game();
+// game();
