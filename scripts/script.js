@@ -77,34 +77,3 @@ buttons.forEach((button) => {
     }
   });
 });
-
-
-
-
-
-
-
-
-
-// play 5 rounds and output the result
-
-// function game() {
-//   for (let i = 0; i < 5; i++) {
-//     playerSelection = "Error";
-//     computerSelection = computerPlay();
-//     while (playerSelection == "Error") {
-//       playerChoice = prompt("Enter a choice between Rock, Paper, or Scissors");
-//       playerSelection = formatAnswer(playerChoice);
-//     }
-//     console.log(playRound(playerSelection, computerSelection));
-//   }
-//   if (playerScore > computerScore) {
-//     console.log("Congratulations! You won " + playerScore + " to " + computerScore + "!")
-//   } else {
-//     console.log("Better luck next time. You lost " + computerScore + " to " + playerScore + "!")
-//   }
-// }
-
-// let playerSelection;
-// let computerSelection;
-// game();
