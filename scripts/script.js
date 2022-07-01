@@ -57,13 +57,22 @@ function playRound(playerSelection) {
   const winner = document.querySelector("#winner");
   roundResult.textContent = resultString;
   runningScore.textContent = `Computer: ${computerScore}  Player: ${playerScore}`;
+  if (playerScore === 5 && computerScore === 5) {
+    winner.textContent = "It's a tie! 5 - 5"
+  } else if (playerScore === 5) {
+    winner.textContent = `Player wins 5 - ${computerScore}!`;
+  } else if (computerScore === 5) {
+    winner.textContent = `Computer wins 5 - ${playerScore}`;
+  }
 }
 
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    playRound(button.id);
+    if (playerScore < 5 && computerScore < 5) {
+      playRound(button.id);
+    }
   });
 });
 
