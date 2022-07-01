@@ -16,19 +16,6 @@ function computerPlay() {
   }
 }
 
-// format the player's answer and return it or "Error" if invalid
-
-// function formatAnswer(choice) {
-//   choiceFormatted = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
-//   if (choiceFormatted == "Rock" || choiceFormatted == "Paper" || choiceFormatted == "Scissors") {
-//     return choiceFormatted;
-//   } else {
-//     return "Error";
-//   }
-// }
-
-// play 1 round comparing player and computer choices
-
 function playRound(playerSelection) {
   computerSelection = computerPlay();
   switch (playerSelection) {
