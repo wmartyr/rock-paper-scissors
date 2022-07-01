@@ -70,6 +70,8 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
+    button.style.backgroundColor = "teal";
+    setTimeout(() => { button.style.backgroundColor = "aquamarine"; }, 100);
     if (playerScore < 5 && computerScore < 5) {
       playRound(button.id);
     }
